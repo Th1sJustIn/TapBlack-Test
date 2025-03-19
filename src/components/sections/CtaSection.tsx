@@ -19,7 +19,7 @@ const CtaSection = ({
   description = "Get your TapBlack card today and start sharing your digital presence with a simple tap. Join thousands of professionals who've already made the switch.",
   buttonText = "Get Your Card Now",
   buttonLink = "/order",
-  backgroundClass = "bg-gradient-to-br from-black via-gray-900 to-gray-800",
+  backgroundClass = "bg-gradient-to-br from-secondary via-background to-secondary/70",
 }: CtaSectionProps) => {
   return (
     <section
@@ -39,7 +39,7 @@ const CtaSection = ({
           <Link href={buttonLink}>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {buttonText}
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -19,10 +19,10 @@ const Step = ({
   return (
     <div className="flex flex-col items-center text-center">
       <div className="relative mb-4">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent text-accent-foreground">
           {icon}
         </div>
-        <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-secondary-foreground font-bold">
+        <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
           {number}
         </div>
       </div>
@@ -92,7 +92,7 @@ const HowItWorksSection = ({
           </p>
         </div>
 
-        <Card className="bg-card/50 backdrop-blur-sm border-none shadow-lg">
+        <Card className="bg-secondary/30 backdrop-blur-sm border border-primary/20 shadow-lg">
           <CardContent className="p-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
               {steps.map((step, index) => (

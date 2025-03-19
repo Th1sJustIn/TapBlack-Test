@@ -75,7 +75,10 @@ export default function Footer({ className = "" }: FooterProps = defaultProps) {
 
   return (
     <footer
-      className={cn("w-full bg-black text-white py-12 px-4 md:px-8", className)}
+      className={cn(
+        "w-full bg-secondary text-foreground py-12 px-4 md:px-8",
+        className,
+      )}
     >
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
@@ -122,7 +125,7 @@ export default function Footer({ className = "" }: FooterProps = defaultProps) {
           ))}
         </div>
 
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <div className="pt-8 border-t border-primary/20 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             &copy; {currentYear} TapBlack. All rights reserved.
           </p>

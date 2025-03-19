@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -31,12 +32,12 @@ const FeatureCard = ({
     >
       <Card
         className={cn(
-          "h-full bg-card/80 backdrop-blur-sm border-primary/10 hover:border-primary/30 transition-all duration-300",
+          "h-full bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300",
           className,
         )}
       >
         <CardHeader>
-          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+          <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent mb-4">
             {icon}
           </div>
           <CardTitle className="text-xl font-bold">{title}</CardTitle>

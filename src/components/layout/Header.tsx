@@ -48,7 +48,7 @@ export default function Header({
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/90 backdrop-blur-sm",
         isScrolled ? "shadow-md py-2" : "py-4",
       )}
     >
@@ -81,7 +81,7 @@ export default function Header({
           <ThemeSwitcher />
           <Button
             size="sm"
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="bg-accent text-accent-foreground hover:bg-accent/90"
           >
             Get Your Card
           </Button>
@@ -124,7 +124,7 @@ export default function Header({
                 {item.label}
               </Link>
             ))}
-            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2">
+            <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 mt-2">
               Get Your Card
             </Button>
           </div>

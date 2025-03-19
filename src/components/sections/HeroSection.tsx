@@ -22,7 +22,7 @@ const HeroSection = ({
   onCtaClick = () => console.log("CTA clicked"),
 }: HeroSectionProps) => {
   return (
-    <section className="relative w-full h-[800px] bg-black text-white overflow-hidden">
+    <section className="relative w-full h-[800px] bg-background text-foreground overflow-hidden">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -32,14 +32,14 @@ const HeroSection = ({
           priority
           className="object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
       </div>
 
       {/* Content container */}
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center px-4 md:px-6">
         <div className="max-w-3xl">
           {/* Accent element */}
-          <div className="w-20 h-1.5 bg-purple-500 mb-8"></div>
+          <div className="w-20 h-1.5 bg-accent mb-8"></div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
@@ -57,7 +57,7 @@ const HeroSection = ({
               onClick={onCtaClick}
               size="lg"
               className={cn(
-                "bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 h-auto text-lg",
+                "bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 h-auto text-lg",
                 "transition-all duration-300 transform hover:translate-y-[-2px]",
               )}
             >
@@ -68,7 +68,7 @@ const HeroSection = ({
             <Button
               variant="outline"
               size="lg"
-              className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white px-8 py-6 h-auto text-lg"
+              className="border-primary/30 bg-transparent text-foreground hover:bg-primary/10 hover:text-foreground px-8 py-6 h-auto text-lg"
             >
               Learn More
             </Button>
@@ -77,10 +77,10 @@ const HeroSection = ({
 
         {/* Floating card visual */}
         <div className="absolute bottom-[-100px] right-[5%] hidden lg:block">
-          <div className="relative w-[300px] h-[180px] bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl shadow-2xl transform rotate-[-5deg]">
+          <div className="relative w-[300px] h-[180px] bg-gradient-to-br from-primary to-accent rounded-xl shadow-2xl transform rotate-[-5deg]">
             <div className="absolute inset-1 bg-black/80 rounded-lg flex items-center justify-center">
               <div className="text-center">
-                <div className="text-purple-500 text-sm font-medium mb-1">
+                <div className="text-primary text-sm font-medium mb-1">
                   TapBlack Express
                 </div>
                 <div className="text-white text-lg font-bold">
